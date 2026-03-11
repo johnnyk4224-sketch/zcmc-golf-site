@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Standings | Zenith City Men’s Club</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <meta name="theme-color" content="#3A4338"/>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.jpg" alt="Zenith City Men's Club logo" />
+        <div class="brand-title">
+          <strong>Zenith City Men’s Club</strong>
+          <span>Enger Park Golf Course • Duluth, Minnesota</span>
+        </div>
+      </a>
+      <button class="menu-btn" data-menu-btn aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="nav" id="site-nav" data-nav>
+        <a href="rules.html" data-nav-link>Rules</a>
+        <a href="standings.html" data-nav-link>Standings</a>
+        <a href="schedule.html" data-nav-link>Schedule</a>
+        <a href="events.html" data-nav-link>Special Events</a>
+        <a href="registration.html" data-nav-link>Registration</a>
+        <a href="game.html" data-nav-link>8-Bit Golf</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="section">
+    <div class="container">
+
+<div class="page-title"><div><h1>Standings</h1><p>Separate standings for each night of the week.</p></div><span class="badge">By Night</span></div>
+<section class="section grid">
+  <article class="card"><h2>Monday Standings</h2><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead><tbody id="monday-standings-body"></tbody></table></div></article>
+  <article class="card"><h2>Tuesday Standings</h2><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead><tbody id="tuesday-standings-body"></tbody></table></div></article>
+  <article class="card"><h2>Wednesday Standings</h2><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead><tbody id="wednesday-standings-body"></tbody></table></div></article>
+</section>
+
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Zenith City Men’s Club • Enger Park Golf Course</div>
+      <div><a href="rules.html">Rules</a> • <a href="schedule.html">Schedule</a> • <a href="events.html">Special Events</a></div>
+    </div>
+  </footer>
+  <script src="js/site.js"></script>
+  <script src="js/config.js"></script><script src="js/standings.js"></script>
+</body>
+</html>
