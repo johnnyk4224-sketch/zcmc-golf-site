@@ -1,0 +1,3 @@
+window.ZCMC_CONFIG = {
+  GOOGLE_SHEETS_WEBHOOK: ""
+};
