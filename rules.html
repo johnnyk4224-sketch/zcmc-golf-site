@@ -177,6 +177,7 @@
         </div>
       </details>
     </div>
+    <div id="rulesContent"></div>
   </main>
 
   <footer class="footer">
@@ -186,5 +187,17 @@
     </div>
   </footer>
   <script src="js/site.js"></script>
+  <script>
+
+fetch(window.ZCMC_CONFIG.GOOGLE_SHEETS_WEBHOOK+"?page=Rules")
+.then(r=>r.json())
+.then(data=>{
+
+document.getElementById("rulesContent").innerHTML=data.content
+
+})
+
+</script>
+  
 </body>
 </html>
