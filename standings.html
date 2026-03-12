@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Standings | Zenith City Men’s Club</title>
+  <meta name="description" content="Standings by night for the Enger Park Golf Course league." />
   <link rel="stylesheet" href="css/styles.css" />
   <meta name="theme-color" content="#3A4338"/>
+  <link rel="icon" href="assets/favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,10 +16,7 @@
     <div class="container header-inner">
       <a class="brand" href="index.html">
         <img src="assets/logo.jpg" alt="Zenith City Men's Club logo" />
-        <div class="brand-title">
-          <strong>Zenith City Men’s Club</strong>
-          <span>Enger Park Golf Course • Duluth, Minnesota</span>
-        </div>
+        <div class="brand-title"><strong>Zenith City Men’s Club</strong><span>Enger Park Golf Course • Duluth, Minnesota</span></div>
       </a>
       <button class="menu-btn" data-menu-btn aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="nav" id="site-nav" data-nav>
@@ -29,25 +29,65 @@
       </nav>
     </div>
   </header>
-  <main id="main" class="section">
-    <div class="container">
 
-<div class="page-title"><div><h1>Standings</h1><p>Separate standings for each night of the week.</p></div><span class="badge">By Night</span></div>
-<section class="section grid">
-  <article class="card"><h2>Monday Standings</h2><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead><tbody id="monday-standings-body"></tbody></table></div></article>
-  <article class="card"><h2>Tuesday Standings</h2><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead><tbody id="tuesday-standings-body"></tbody></table></div></article>
-  <article class="card"><h2>Wednesday Standings</h2><div class="table-wrap"><table><thead><tr><th>#</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead><tbody id="wednesday-standings-body"></tbody></table></div></article>
-</section>
-
+  <main id="main" class="container">
+    <div class="page-title">
+      <div>
+        <h1>Standings</h1>
+        <p>Separate standings for each night of the week.</p>
+      </div>
+      <span class="badge">By Night</span>
     </div>
+
+    <section class="section grid">
+      <article class="card">
+        <h2>Monday Standings</h2>
+        <div class="table-wrap">
+          <table aria-label="Monday standings">
+            <thead><tr><th>Rank</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Team A</td><td>4</td><td>1</td><td>8</td></tr>
+              <tr><td>2</td><td>Team B</td><td>3</td><td>2</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Tuesday Standings</h2>
+        <div class="table-wrap">
+          <table aria-label="Tuesday standings">
+            <thead><tr><th>Rank</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Team C</td><td>5</td><td>0</td><td>10</td></tr>
+              <tr><td>2</td><td>Team D</td><td>3</td><td>2</td><td>6</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Wednesday Standings</h2>
+        <div class="table-wrap">
+          <table aria-label="Wednesday standings">
+            <thead><tr><th>Rank</th><th>Team</th><th>Wins</th><th>Losses</th><th>Points</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Team E</td><td>4</td><td>1</td><td>8</td></tr>
+              <tr><td>2</td><td>Team F</td><td>2</td><td>3</td><td>4</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:.85rem;">Replace the placeholder teams with your real team names for each night.</p>
+      </article>
+    </section>
   </main>
+
   <footer class="footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> Zenith City Men’s Club • Enger Park Golf Course</div>
-      <div><a href="rules.html">Rules</a> • <a href="schedule.html">Schedule</a> • <a href="events.html">Special Events</a></div>
+      <div><a href="schedule.html">Schedule</a> • <a href="rules.html">Rules</a></div>
     </div>
   </footer>
   <script src="js/site.js"></script>
-  <script src="js/config.js"></script><script src="js/standings.js"></script>
 </body>
 </html>
