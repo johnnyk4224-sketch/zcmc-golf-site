@@ -31,7 +31,21 @@
   <main id="main" class="section">
     <div class="container success-panel">
       <div class="card">
-        <h1>Registration submitted</h1>
+        <h1>Registration submitted</h1>      
+        <div class="card" style="margin-top:1rem;">
+        <ul class="notice-list">
+          <li>The form has automatically been sent to the league administrator.</li>
+          <li>Payment will need to be dropped off at the clubhouse.</li>
+          <li>If your team sponsor would like to be listed on the league website, send the logo here:
+          <a href="#" id="contactLink">Email the League</a>
+<script>
+document.getElementById("contactLink").addEventListener("click", function(e){
+  e.preventDefault();
+  const user = "johnnyk4224";
+  const domain = "gmail.com";
+  window.location.href = "mailto:" + user + "@" + domain;
+});
+</script>
         <p>Thanks — your roster has been sent successfully.</p>
         <p><a class="btn btn-primary" href="index.html">Return to homepage</a></p>
       </div>
