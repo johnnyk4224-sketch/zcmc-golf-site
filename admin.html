@@ -19,7 +19,42 @@
 </select>
 
 <textarea id="editor" style="width:100%;height:400px"></textarea>
-
+<section class="card" style="margin-top:1rem;">
+  <h2>Enter Match Result</h2>
+  <div class="form-grid">
+    <div class="field third">
+      <label for="resultDate">Date</label>
+      <input id="resultDate" type="date" />
+    </div>
+    <div class="field third">
+      <label for="resultNight">League Night</label>
+      <select id="resultNight">
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+      </select>
+    </div>
+    <div class="field third">
+      <label for="teamA">Team A</label>
+      <input id="teamA" type="text" />
+    </div>
+    <div class="field third">
+      <label for="teamB">Team B</label>
+      <input id="teamB" type="text" />
+    </div>
+    <div class="field third">
+      <label for="pointsA">Team A Points</label>
+      <input id="pointsA" type="number" step="0.5" />
+    </div>
+    <div class="field third">
+      <label for="pointsB">Team B Points</label>
+      <input id="pointsB" type="number" step="0.5" />
+    </div>
+  </div>
+  <div class="form-actions">
+    <button class="btn btn-primary" onclick="saveResult()">Save Match Result</button>
+  </div>
+</section>
 <button onclick="loadPage()">Load</button>
 <button onclick="savePage()">Save</button>
 
