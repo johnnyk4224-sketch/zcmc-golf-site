@@ -1,21 +1,19 @@
 (() => {
+  const banner = document.getElementById("rainoutBanner");
+  const text = document.getElementById("rainoutText");
+  const api = window.ZCMC_CONFIG && window.ZCMC_CONFIG.GOOGLE_SHEETS_WEBHOOK;
 
-const banner = document.getElementById("rainoutBanner")
-const text = document.getElementById("rainoutText")
+  if (!banner || !text || !api) return;
 
-if(!banner) return
-
-fetch(window.ZCMC_CONFIG.GOOGLE_SHEETS_WEBHOOK + "?mode=content&page=Banner")
-.then(r=>r.json())
-.then(data=>{
-
-if(data.content && data.content.trim() !== ""){
-
-banner.hidden = false
-text.textContent = data.content
-
-}
-
-})
-
-})()
+  fetch(api + "?mode=content&page=Banner")
+    .then(r => r.json())
+    .then(data => {
+      if (data.content && data.content.trim() !== "") {
+        banner.hidden = false;
+        text.textContent = data.content;
+      }
+    })
+    .catch(err => {
+      console.error("Banner load failed:", err);
+    });
+})();
