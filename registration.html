@@ -172,9 +172,20 @@
       <div class="card" style="margin-top:1rem;">
         <h2>What happens after submission?</h2>
         <ul class="notice-list">
-          <li>The form is captured by Netlify Forms.</li>
-          <li>You can optionally mirror every submission into Google Sheets.</li>
-          <li>Netlify email notifications can be turned on in the site dashboard.</li>
+          <li>The form is automatically sent to the league administrator.</li>
+          <li>Payment will need to be dropped off at the clubhouse.</li>
+          <li>If your team sponsor would like to be listed on the league website, send the logo here:
+          <a href="#" id="contactLink">Email the League</a>
+
+<script>
+document.getElementById("contactLink").addEventListener("click", function(e){
+  e.preventDefault();
+  const user = "zcmcgolf";
+  const domain = "gmail.com";
+  window.location.href = "mailto:" + user + "@" + domain;
+});
+</script>
+          </li>
         </ul>
       </div>
     </div>
