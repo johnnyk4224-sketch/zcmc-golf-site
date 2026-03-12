@@ -201,6 +201,17 @@ tr:hover td{background:rgba(143,146,114,.12)}
   .nav.open a,.field.half,.field.third,.gallery figure{width:100%;grid-column:span 12}
   .gallery img{height:200px}
 }
+.rainout-banner{
+  background:#8B1E1E;
+  color:#fff;
+  font-weight:800;
+  text-align:center;
+  padding:12px;
+  letter-spacing:.04em;
+  position:sticky;
+  top:70px;
+  z-index:200;
+}
 @media print {
   .header,.footer,.menu-btn,.nav,.print-controls,.back-top,.rules-toc{display:none !important}
   body{background:#fff !important;animation:none !important}
