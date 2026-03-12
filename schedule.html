@@ -31,6 +31,7 @@
   </header>
 
   <main id="main" class="container">
+    <div id="scheduleContent"></div>
     <div class="page-title">
       <div>
         <h1>Schedule</h1>
@@ -96,5 +97,18 @@
     </div>
   </footer>
   <script src="js/site.js"></script>
+
+  <script>
+
+fetch(window.ZCMC_CONFIG.GOOGLE_SHEETS_WEBHOOK+"?page=Schedule")
+.then(r=>r.json())
+.then(data=>{
+
+document.getElementById("rulesContent").innerHTML=data.content
+
+})
+
+</script>
+  
 </body>
 </html>
