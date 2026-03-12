@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Registration | Zenith City Men’s Club</title>
+  <meta name="description" content="Register your team for the 2026 ZCMC Sunset League at Enger Park Golf Course." />
   <link rel="stylesheet" href="css/styles.css" />
   <meta name="theme-color" content="#3A4338"/>
+  <link rel="icon" href="assets/favicon.ico" sizes="any"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"/>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -13,10 +16,7 @@
     <div class="container header-inner">
       <a class="brand" href="index.html">
         <img src="assets/logo.jpg" alt="Zenith City Men's Club logo" />
-        <div class="brand-title">
-          <strong>Zenith City Men’s Club</strong>
-          <span>Enger Park Golf Course • Duluth, Minnesota</span>
-        </div>
+        <div class="brand-title"><strong>Zenith City Men’s Club</strong><span>Enger Park Golf Course • Duluth, Minnesota</span></div>
       </a>
       <button class="menu-btn" data-menu-btn aria-expanded="false" aria-controls="site-nav">Menu</button>
       <nav class="nav" id="site-nav" data-nav>
@@ -29,35 +29,152 @@
       </nav>
     </div>
   </header>
+
   <main id="main" class="section">
     <div class="container">
-
-<div class="page-title"><div><h1>2026 ZCMC Sunset League Registration</h1><p>Team roster registration for Monday, Tuesday, or Wednesday league nights.</p></div><span class="badge">Online Form</span></div>
-<div class="form-shell" style="margin-top:1rem;">
-  <form name="zcmc-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/registration-thank-you.html" data-registration-form>
-    <input type="hidden" name="form-name" value="zcmc-registration" />
-    <p hidden><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
-    <section class="player-card" style="margin-top:0;">
-      <h3>Team Information</h3>
-      <div class="form-grid">
-        <div class="field half"><label>2026 Team Name</label><input name="team_name" type="text" required /></div>
-        <div class="field half"><label>League Night</label><select name="league_night" required><option value="">Choose a night</option><option value="Monday">Monday</option><option value="Tuesday">Tuesday</option><option value="Wednesday">Wednesday</option></select></div>
-        <div class="field half"><label>2025 Team Name</label><input name="previous_team_name" type="text" /></div>
-        <div class="field half"><label>Notes (optional)</label><input name="captain_notes" type="text" /></div>
+      <div class="page-title">
+        <div>
+          <h1>2026 ZCMC Sunset League Registration</h1>
+          <p>Team roster registration for Monday, Tuesday, or Wednesday league nights.</p>
+        </div>
+        <span class="badge">Online Form</span>
       </div>
-    </section>
-    <div data-players-wrap data-player-count="4">
-      <section class="player-card"><h3>Captain / Player 1</h3><div class="form-grid"><div class="field half"><label>Name</label><input name="captain_name" type="text" required /></div><div class="field half"><label>Email</label><input name="captain_email" type="email" required /></div><div class="field half"><label>Phone Number</label><input name="captain_phone" type="tel" /></div><div class="field half"><label>Address</label><input name="captain_address" type="text" /></div><div class="field half"><label>Tee Selection</label><select name="captain_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div></div></section>
-      <section class="player-card"><h3>Player 2</h3><div class="form-grid"><div class="field half"><label>Name</label><input name="player2_name" type="text" required /></div><div class="field half"><label>Email</label><input name="player2_email" type="email" /></div><div class="field half"><label>Phone Number</label><input name="player2_phone" type="tel" /></div><div class="field half"><label>Address</label><input name="player2_address" type="text" /></div><div class="field half"><label>Tee Selection</label><select name="player2_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div></div></section>
-      <section class="player-card"><h3>Player 3</h3><div class="form-grid"><div class="field half"><label>Name</label><input name="player3_name" type="text" required /></div><div class="field half"><label>Email</label><input name="player3_email" type="email" /></div><div class="field half"><label>Phone Number</label><input name="player3_phone" type="tel" /></div><div class="field half"><label>Address</label><input name="player3_address" type="text" /></div><div class="field half"><label>Tee Selection</label><select name="player3_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div></div></section>
-      <section class="player-card"><h3>Player 4</h3><div class="form-grid"><div class="field half"><label>Name</label><input name="player4_name" type="text" required /></div><div class="field half"><label>Email</label><input name="player4_email" type="email" /></div><div class="field half"><label>Phone Number</label><input name="player4_phone" type="tel" /></div><div class="field half"><label>Address</label><input name="player4_address" type="text" /></div><div class="field half"><label>Tee Selection</label><select name="player4_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div></div></section>
-    </div>
-    <div class="form-actions"><button class="btn btn-secondary" type="button" data-add-player>Add Another Player</button><button class="btn btn-primary" type="submit">Submit Registration</button></div>
-  </form>
-</div>
 
+      <div class="card" style="margin-top:1rem;">
+        <p><strong>Fees on form:</strong> Team entry fee is listed as TBD and player registration fee is listed as $110.</p>
+      </div>
+
+      <div class="form-shell" style="margin-top:1rem;">
+        <form name="zcmc-registration" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/registration-thank-you.html" data-registration-form>
+          <input type="hidden" name="form-name" value="zcmc-registration" />
+          <p hidden>
+            <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+          </p>
+
+          <input type="hidden" name="player5_name" />
+          <input type="hidden" name="player5_email" />
+          <input type="hidden" name="player5_phone" />
+          <input type="hidden" name="player5_address" />
+          <input type="hidden" name="player5_tees" />
+          <input type="hidden" name="player6_name" />
+          <input type="hidden" name="player6_email" />
+          <input type="hidden" name="player6_phone" />
+          <input type="hidden" name="player6_address" />
+          <input type="hidden" name="player6_tees" />
+          <input type="hidden" name="player7_name" />
+          <input type="hidden" name="player7_email" />
+          <input type="hidden" name="player7_phone" />
+          <input type="hidden" name="player7_address" />
+          <input type="hidden" name="player7_tees" />
+          <input type="hidden" name="player8_name" />
+          <input type="hidden" name="player8_email" />
+          <input type="hidden" name="player8_phone" />
+          <input type="hidden" name="player8_address" />
+          <input type="hidden" name="player8_tees" />
+          <input type="hidden" name="player9_name" />
+          <input type="hidden" name="player9_email" />
+          <input type="hidden" name="player9_phone" />
+          <input type="hidden" name="player9_address" />
+          <input type="hidden" name="player9_tees" />
+          <input type="hidden" name="player10_name" />
+          <input type="hidden" name="player10_email" />
+          <input type="hidden" name="player10_phone" />
+          <input type="hidden" name="player10_address" />
+          <input type="hidden" name="player10_tees" />
+
+          <section class="player-card" style="margin-top:0;">
+            <h3>Team Information</h3>
+            <div class="form-grid">
+              <div class="field half">
+                <label for="team_name">2026 Team Name</label>
+                <input id="team_name" name="team_name" type="text" required />
+              </div>
+              <div class="field half">
+                <label for="league_night">League Night</label>
+                <select id="league_night" name="league_night" required>
+                  <option value="">Choose a night</option>
+                  <option value="Monday">Monday</option>
+                  <option value="Tuesday">Tuesday</option>
+                  <option value="Wednesday">Wednesday</option>
+                </select>
+              </div>
+              <div class="field half">
+                <label for="previous_team_name">2025 Team Name</label>
+                <input id="previous_team_name" name="previous_team_name" type="text" />
+              </div>
+              <div class="field half">
+                <label for="captain_notes">Notes (optional)</label>
+                <input id="captain_notes" name="captain_notes" type="text" placeholder="Anything the league should know?" />
+              </div>
+            </div>
+          </section>
+
+          <div data-players-wrap data-player-count="4">
+            <section class="player-card">
+              <h3>Captain / Player 1</h3>
+              <div class="form-grid">
+                <div class="field half"><label for="captain_name">Name</label><input id="captain_name" name="captain_name" type="text" required /></div>
+                <div class="field half"><label for="captain_email">Email</label><input id="captain_email" name="captain_email" type="email" required /></div>
+                <div class="field half"><label for="captain_phone">Phone Number</label><input id="captain_phone" name="captain_phone" type="tel" /></div>
+                <div class="field half"><label for="captain_address">Address</label><input id="captain_address" name="captain_address" type="text" /></div>
+                <div class="field half"><label for="captain_tees">Tee Selection</label><select id="captain_tees" name="captain_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div>
+              </div>
+            </section>
+
+            <section class="player-card">
+              <h3>Player 2</h3>
+              <div class="form-grid">
+                <div class="field half"><label for="player2_name">Name</label><input id="player2_name" name="player2_name" type="text" required /></div>
+                <div class="field half"><label for="player2_email">Email</label><input id="player2_email" name="player2_email" type="email" /></div>
+                <div class="field half"><label for="player2_phone">Phone Number</label><input id="player2_phone" name="player2_phone" type="tel" /></div>
+                <div class="field half"><label for="player2_address">Address</label><input id="player2_address" name="player2_address" type="text" /></div>
+                <div class="field half"><label for="player2_tees">Tee Selection</label><select id="player2_tees" name="player2_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div>
+              </div>
+            </section>
+
+            <section class="player-card">
+              <h3>Player 3</h3>
+              <div class="form-grid">
+                <div class="field half"><label for="player3_name">Name</label><input id="player3_name" name="player3_name" type="text" required /></div>
+                <div class="field half"><label for="player3_email">Email</label><input id="player3_email" name="player3_email" type="email" /></div>
+                <div class="field half"><label for="player3_phone">Phone Number</label><input id="player3_phone" name="player3_phone" type="tel" /></div>
+                <div class="field half"><label for="player3_address">Address</label><input id="player3_address" name="player3_address" type="text" /></div>
+                <div class="field half"><label for="player3_tees">Tee Selection</label><select id="player3_tees" name="player3_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div>
+              </div>
+            </section>
+
+            <section class="player-card">
+              <h3>Player 4</h3>
+              <div class="form-grid">
+                <div class="field half"><label for="player4_name">Name</label><input id="player4_name" name="player4_name" type="text" required /></div>
+                <div class="field half"><label for="player4_email">Email</label><input id="player4_email" name="player4_email" type="email" /></div>
+                <div class="field half"><label for="player4_phone">Phone Number</label><input id="player4_phone" name="player4_phone" type="tel" /></div>
+                <div class="field half"><label for="player4_address">Address</label><input id="player4_address" name="player4_address" type="text" /></div>
+                <div class="field half"><label for="player4_tees">Tee Selection</label><select id="player4_tees" name="player4_tees"><option value="White Tees">White Tees</option><option value="Gold Tees (55+)">Gold Tees (55+)</option></select></div>
+              </div>
+            </section>
+          </div>
+
+          <div class="form-actions">
+            <button class="btn btn-secondary" type="button" data-add-player>Add Another Player</button>
+            <button class="btn btn-primary" type="submit">Submit Registration</button>
+          </div>
+
+          <p class="helper" style="margin-top:.8rem;">Teams can include 4–10 players.</p>
+        </form>
+      </div>
+
+      <div class="card" style="margin-top:1rem;">
+        <h2>What happens after submission?</h2>
+        <ul class="notice-list">
+          <li>The form is captured by Netlify Forms.</li>
+          <li>You can optionally mirror every submission into Google Sheets.</li>
+          <li>Netlify email notifications can be turned on in the site dashboard.</li>
+        </ul>
+      </div>
     </div>
   </main>
+
   <footer class="footer">
     <div class="container footer-inner">
       <div>© <span id="year"></span> Zenith City Men’s Club • Enger Park Golf Course</div>
@@ -65,6 +182,7 @@
     </div>
   </footer>
   <script src="js/site.js"></script>
+  <script src="js/config.js"></script>
   <script src="js/registration.js"></script>
 </body>
 </html>
