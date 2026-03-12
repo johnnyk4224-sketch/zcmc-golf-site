@@ -1,3 +1,3 @@
 window.ZCMC_CONFIG = {
-  GOOGLE_SHEETS_WEBHOOK: "https://script.google.com/macros/s/AKfycbyvDuwBdLC2EAVNLUuNEzM8QO_fVmDK6NYV2TXvx9e_6OxrfRGIY0KYj6dOMO-nLaH9/exec"
+  GOOGLE_SHEETS_WEBHOOK: "https://script.google.com/macros/s/AKfycby9ZWTtXsPwi_WzwHhDrJqy_c8mbEK85md_K49UNAblSevYeL8iHDEN8KCYl9k_rQqV/exec"
 };
