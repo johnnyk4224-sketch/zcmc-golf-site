@@ -3,21 +3,25 @@ async function loadStandings(night, tbodyId) {
   const tbody = document.getElementById(tbodyId);
   if (!api || !tbody) return;
 
-  const res = await fetch(api + "?mode=standings&night=" + encodeURIComponent(night));
-  const data = await res.json();
-  tbody.innerHTML = "";
+  try {
+    const res = await fetch(api + "?mode=standings&night=" + encodeURIComponent(night));
+    const data = await res.json();
 
-  (data.rows || []).forEach((row, i) => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${i + 1}</td>
-      <td>${row.team}</td>
-      <td>${row.wins}</td>
-      <td>${row.losses}</td>
-      <td>${row.points}</td>
-    `;
-    tbody.appendChild(tr);
-  });
+    tbody.innerHTML = "";
+
+    (data.rows || []).forEach((row, i) => {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${i + 1}</td>
+        <td>${row.team}</td>
+        <td>${row.points_won}</td>
+        <td>${row.points_against}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  } catch (err) {
+    console.error("Standings load failed:", err);
+  }
 }
 
 loadStandings("Monday", "monday-standings-body");
