@@ -13,9 +13,9 @@ async function loadStandings(night, tbodyId) {
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td>${i + 1}</td>
-        <td>${row.team}</td>
-        <td>${row.points_won}</td>
-        <td>${row.points_against}</td>
+        <td>${row.team || ""}</td>
+        <td>${row.points_won || 0}</td>
+        <td>${row.points_against || 0}</td>
       `;
       tbody.appendChild(tr);
     });
