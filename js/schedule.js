@@ -23,10 +23,8 @@ async function loadSchedule() {
       const tr = document.createElement("tr");
       tr.innerHTML = `
         <td>${row.date || ""}</td>
-        <td>${row.tee_time || ""}</td>
         <td>${row.team_a || ""}</td>
         <td>${row.team_b || ""}</td>
-        <td>${row.notes || ""}</td>
       `;
       tbody.appendChild(tr);
     });
