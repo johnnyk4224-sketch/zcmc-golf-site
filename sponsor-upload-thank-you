@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sponsor Logo Submitted | ZCMC</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <main class="section">
+    <div class="container">
+      <div class="card">
+        <h1>Logo submitted</h1>
+        <p>Thanks — your sponsor logo has been sent to the league.</p>
+        <a class="btn btn-primary" href="index.html">Return Home</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
