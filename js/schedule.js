@@ -22,10 +22,15 @@ async function loadSchedule() {
 
       const tr = document.createElement("tr");
       tr.innerHTML = `
-        <td>${row.date || ""}</td>
-        <td>${row.tee_time || ""}</td>
-        <td>${row.team_a || ""}</td>
-        <td>${row.team_b || ""}</td>
+return {
+  night: nightName,
+  date: obj["Date"] || "",
+  tee_time: obj["TeeTime"] || "",
+  team_a: obj["TeamA"] || "",
+  team_b: obj["TeamB"] || "",
+  points_a: obj["PointsA"] || "",
+  points_b: obj["PointsB"] || ""
+};
       `;
       tbody.appendChild(tr);
     });
