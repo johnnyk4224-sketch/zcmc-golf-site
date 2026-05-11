@@ -45,56 +45,69 @@
   </div>
 
   <section class="section grid">
-    <article class="card" style="grid-column: span 12;">
-      <h2 id="mon">Monday Night Schedule</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-  <th>Date</th>
-  <th>Tee Time</th>
-  <th>Team A</th>
-  <th>Team B</th>
-            </tr>
-          </thead>
-          <tbody id="schedule-monday-body"></tbody>
-        </table>
-      </div>
-    </article>
+   <details class="card" style="grid-column: span 12;" open>
+  <summary>
+    <h2 style="display:inline;">Monday Schedule</h2>
+    <span class="badge" style="float:right;">Expand / Collapse</span>
+  </summary>
 
-    <article class="card" style="grid-column: span 12;">
-      <h2 id="tue">Tuesday Night Schedule</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-  <th>Date</th>
-  <th>Tee Time</th>
-  <th>Team A</th>
-  <th>Team B</th>
-            </tr>
-          </thead>
-          <tbody id="schedule-tuesday-body"></tbody>
-        </table>
-      </div>
-    </article>
+  <div class="table-wrap" style="margin-top:1rem;">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Tee Time</th>
+          <th>Team A</th>
+          <th>Team B</th>
+        </tr>
+      </thead>
 
-    <article class="card" style="grid-column: span 12;">
-      <h2 id="wed">Wednesday Night Schedule</h2>
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-  <th>Date</th>
-  <th>Tee Time</th>
-  <th>Team A</th>
-  <th>Team B</th>
-            </tr>
-          </thead>
-          <tbody id="schedule-wednesday-body"></tbody>
-        </table>
-      </div>
-    </article>
+      <tbody id="schedule-monday-body"></tbody>
+    </table>
+  </div>
+</details>
+
+<details class="card" style="grid-column: span 12;">
+  <summary>
+    <h2 style="display:inline;">Tuesday Schedule</h2>
+    <span class="badge" style="float:right;">Expand / Collapse</span>
+  </summary>
+
+  <div class="table-wrap" style="margin-top:1rem;">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Tee Time</th>
+          <th>Team A</th>
+          <th>Team B</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-tuesday-body"></tbody>
+    </table>
+  </div>
+</details>
+
+<details class="card" style="grid-column: span 12;">
+  <summary>
+    <h2 style="display:inline;">Wednesday Schedule</h2>
+    <span class="badge" style="float:right;">Expand / Collapse</span>
+  </summary>
+
+  <div class="table-wrap" style="margin-top:1rem;">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Tee Time</th>
+          <th>Team A</th>
+          <th>Team B</th>
+        </tr>
+      </thead>
+      <tbody id="schedule-wednesday-body"></tbody>
+    </table>
+  </div>
+</details>
   </section>
 </main>
 
