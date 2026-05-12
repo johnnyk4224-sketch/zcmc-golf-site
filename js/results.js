@@ -1,35 +1,63 @@
-async function loadLowNetWinners() {
+async function loadResults() {
   const api = window.ZCMC_CONFIG && window.ZCMC_CONFIG.GOOGLE_SHEETS_WEBHOOK;
   if (!api) return;
 
-  const res = await fetch(api + "?mode=schedule");
-  const data = await res.json();
+  try {
+    const res = await fetch(api + "?mode=schedule");
+    const data = await res.json();
 
-  const groups = {
-    Monday: document.getElementById("low-net-monday-body"),
-    Tuesday: document.getElementById("low-net-tuesday-body"),
-    Wednesday: document.getElementById("low-net-wednesday-body")
-  };
+    const mondayBody = document.getElementById("results-monday-body");
+    const TuesdayBody = document.getElementById("results-tuesday-body");
+    const wednesdayBody = document.getElementById("results-wednesday-body");
 
-  Object.values(groups).forEach(tbody => {
-    if (tbody) tbody.innerHTML = "";
-  });
+    if (mondayBody) mondayBody.innerHTML = "";
+    if (TuesdayBody) TuesdayBody.innerHTML = "";
+    if (wednesdayBody) wednesdayBody.innerHTML = "";
 
-  (data.rows || []).forEach(row => {
-    if (!row.low_net_1st && !row.low_net_2nd && !row.low_net_3rd) return;
+    (data.rows || []).forEach(row => {
+      const hasAnyResult =
+        row.low_net_1st ||
+        row.low_net_2nd ||
+        row.proxy_1 ||
+        row.proxy_2;
 
-    const tbody = groups[row.night];
-    if (!tbody) return;
+      if (!hasAnyResult) return;
 
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td>${row.date || ""}</td>
-      <td>${row.low_net_1st || ""}</td>
-      <td>${row.low_net_2nd || ""}</td>
-      <td>${row.low_net_3rd || ""}</td>
-    `;
-    tbody.appendChild(tr);
-  });
+      const tr = document.createElement("tr");
+
+      if (row.night === "Monday" && mondayBody) {
+        tr.innerHTML = `
+          <td>${row.date || ""}</td>
+          <td>${row.low_net_1st || ""}</td>
+          <td>${row.low_net_2nd || ""}</td>
+          <td>${row.proxy_1 || ""}</td>
+          <td>${row.proxy_2 || ""}</td>
+        `;
+        mondayBody.appendChild(tr);
+      }
+
+      if (row.night === "Tuesday" && TuesdayBody) {
+        tr.innerHTML = `
+          <td>${row.date || ""}</td>
+          <td>${row.low_net_1st || ""}</td>
+          <td>${row.proxy_1 || ""}</td>
+          <td>${row.proxy_2 || ""}</td>
+        `;
+        TuesdayBody.appendChild(tr);
+      }
+
+      if (row.night === "Wednesday" && wednesdayBody) {
+        tr.innerHTML = `
+          <td>${row.date || ""}</td>
+          <td>${row.low_net_1st || ""}</td>
+          <td>${row.proxy_1 || ""}</td>
+        `;
+        wednesdayBody.appendChild(tr);
+      }
+    });
+  } catch (err) {
+    console.error("Results load failed:", err);
+  }
 }
 
-loadLowNetWinners();
+loadResults();
