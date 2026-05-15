@@ -24,7 +24,30 @@ body{
   background-size:140% 140%,140% 140%,100% 100%;
   animation:zcmc-bg 18s ease-in-out infinite;
 }
+details.card summary {
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 700;
+  list-style: none;
+}
 
+details.card summary::-webkit-details-marker {
+  display: none;
+}
+
+details.card summary::before {
+  content: "+ ";
+  font-weight: 800;
+  margin-right: 6px;
+}
+
+details.card[open] summary::before {
+  content: "− ";
+}
+
+details.card {
+  padding: 1rem 1.2rem;
+}
 @keyframes zcmc-bg {
   0%   { background-position: 0% 0%, 100% 0%, 0% 0%; }
   50%  { background-position: 20% 10%, 80% 10%, 0% 0%; }
