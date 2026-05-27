@@ -15,7 +15,6 @@ async function loadStandings(night, tbodyId) {
         <td>${i + 1}</td>
         <td>${row.team || ""}</td>
         <td>${row.points_won || 0}</td>
-        <td>${row.points_against || 0}</td>
       `;
       tbody.appendChild(tr);
     });
