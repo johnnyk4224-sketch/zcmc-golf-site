@@ -40,6 +40,7 @@ async function loadResults() {
         tr.innerHTML = `
           <td>${row.date || ""}</td>
           <td>${row.low_net_1st || ""}</td>
+          <td>${row.low_net_2nd || ""}</td>
           <td>${row.proxy_1 || ""}</td>
           <td>${row.proxy_2 || ""}</td>
         `;
